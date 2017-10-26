@@ -5,26 +5,35 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 	<script type="text/javascript" src="assets/js/moment.js"></script>
-  <script type="text/javascript" src="assets/js/countdown.min.js"></script>
-  <script type="text/javascript" src="assets/js/scripts.js"></script>
+  	<script type="text/javascript" src="assets/js/countdown.min.js"></script>
+  	<script type="text/javascript" src="assets/js/scripts.js"></script>
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
+
+<script type="text/javascript">
+	
+	document.write('<style>section#night { width: '+ percentage +'%; }</style>');
+
+</script>
+
 <body>
 
 	<main ng-controller="timeController">
       
+  	<section id="night">
+
+  	</section>
+
+
+  	<!--
       {{ dataset.results.sunset | date: 'HH:mm:ss' }}<br>
       {{ dataset.results.sunrise | date: 'HH:mm:ss' }}<br><br>
 
       {{ dataset.results.sunset | date: 'yyyy-MM-dd HH:mm:ss' }}<br>
       {{ dataset.results.sunrise | date: 'yyyy-MM-dd HH:mm:ss' }}<br><br>
-      
-      <h1>hej</h1>
+	-->
 
 	</main>
-
-
-<h2>Thomsa</h2>
-
 
 </body>
 </html>
