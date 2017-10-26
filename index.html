@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="assets/js/app.js"></script>
 	<script type="text/javascript" src="assets/js/moment.js"></script>
   <script type="text/javascript" src="assets/js/countdown.min.js"></script>
+  <script type="text/javascript" src="assets/js/scripts.js"></script>
 </head>
 <body>
 
@@ -16,22 +17,6 @@
 
       {{ dataset.results.sunset | date: 'yyyy-MM-dd HH:mm:ss' }}<br>
       {{ dataset.results.sunrise | date: 'yyyy-MM-dd HH:mm:ss' }}<br><br>
-
-       <script>
-          var sunrise = '2017-10-26 08:12:29';
-          var sunset = '2017-10-26 17:52:06';
-
-          var sunriseTimestamp = (moment('2017-10-26 17:52:06').unix())*1000;
-          var sunsetTimestamp = (moment('2017-10-26 17:52:06').unix())*1000;
-
-          var totalTime = '';
-          var timeLeft = countdown(sunsetTimestamp, null, countdown.SECONDS);
-    
-          var percentage = 1 - (timeLeft/totalTime);
-
-          var count = moment("1754", "hhmm").fromNow();
-          document.write(count + '<br><br>');
-       </script>
 
 	</main>
 
