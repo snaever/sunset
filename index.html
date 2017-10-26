@@ -11,20 +11,26 @@
 
 	<main ng-controller="timeController">
       
-      {{ dataset.results.sunset | date: 'HH:mm' }}<br>
-      {{ dataset.results.sunrise | date: 'HH:mm' }}<br><br>
+      {{ dataset.results.sunset | date: 'HH:mm:ss' }}<br>
+      {{ dataset.results.sunrise | date: 'HH:mm:ss' }}<br><br>
 
-      {{ dataset.results.sunset | date: 'yyyy-MM-dd HH:mm:ss' }}<br><br>
+      {{ dataset.results.sunset | date: 'yyyy-MM-dd HH:mm:ss' }}<br>
+      {{ dataset.results.sunrise | date: 'yyyy-MM-dd HH:mm:ss' }}<br><br>
 
        <script>
-       		var count = moment("1754", "hhmm").fromNow();
-         	document.write(count + '<br><br>');
+          var sunrise = '2017-10-26 08:12:29';
+          var sunset = '2017-10-26 17:52:06';
 
-          var timeStamp = ( moment('2017-10-26 17:52:06').unix() )*1000
+          var sunriseTimestamp = (moment('2017-10-26 17:52:06').unix())*1000;
+          var sunsetTimestamp = (moment('2017-10-26 17:52:06').unix())*1000;
 
-          var time = countdown(timeStamp, null, countdown.SECONDS);
-          document.write(time + '<br><br>');
+          var totalTime = '';
+          var timeLeft = countdown(sunsetTimestamp, null, countdown.SECONDS);
+    
+          var percentage = 1 - (timeLeft/totalTime);
 
+          var count = moment("1754", "hhmm").fromNow();
+          document.write(count + '<br><br>');
        </script>
 
 	</main>
