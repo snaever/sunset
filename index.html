@@ -5,6 +5,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 	<script type="text/javascript" src="assets/js/moment.js"></script>
+  <script type="text/javascript" src="assets/js/countdown.min.js"></script>
 </head>
 <body>
 
@@ -14,9 +15,19 @@
       {{ dataset.results.sunset | date: 'HHmm' }}<br><br>
       {{ dataset.results.sunrise | date: 'HH:mm' }}<br><br>
 
+      {{ dataset.results.sunset | date: 'medium' }}<br><br>
+
+
        <script>
        		var count = moment("1754", "hhmm").fromNow();
-           	document.write(count);
+         	document.write(count + '<br><br>');
+
+          var time = countdown(150903314200, null, countdown.SECONDS);
+          document.write(time + '<br><br>');
+
+          var myDate = new Date("Oct 26, 2017 5:52:22 PM");
+          var myEpoch = myDate.getTime()/1000.0;
+          document.write(myEpoch);
        </script>
 
 	</main>
