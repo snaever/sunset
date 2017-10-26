@@ -12,22 +12,19 @@
 	<main ng-controller="timeController">
       
       {{ dataset.results.sunset | date: 'HH:mm' }}<br>
-      {{ dataset.results.sunset | date: 'HHmm' }}<br><br>
       {{ dataset.results.sunrise | date: 'HH:mm' }}<br><br>
 
-      {{ dataset.results.sunset | date: 'medium' }}<br><br>
-
+      {{ dataset.results.sunset | date: 'yyyy-MM-dd HH:mm:ss' }}<br><br>
 
        <script>
        		var count = moment("1754", "hhmm").fromNow();
          	document.write(count + '<br><br>');
 
-          var time = countdown(150903314200, null, countdown.SECONDS);
+          var timeStamp = ( moment('2017-10-26 17:52:06').unix() )*1000
+
+          var time = countdown(timeStamp, null, countdown.SECONDS);
           document.write(time + '<br><br>');
 
-          var myDate = new Date("Oct 26, 2017 5:52:22 PM");
-          var myEpoch = myDate.getTime()/1000.0;
-          document.write(myEpoch);
        </script>
 
 	</main>
