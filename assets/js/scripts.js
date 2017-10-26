@@ -7,18 +7,24 @@
   var sunsetTimestamp = (moment('2017-10-26 17:52:06').unix())*1000;
 
 // Calculating the difference in seconds between today's sunrise and sunset
-  var t1 = new Date(sunrise);
-  var t2 = new Date(sunset);
+  var t1 = new Date(sunset);
+  var t2 = new Date(sunrise);
   var dif = t1.getTime() - t2.getTime();
 
-  var Seconds_from_T1_to_T2 = dif / 1000;
-  var Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
+  var secondsBetween = dif / 1000;
 
+  console.log('Seconds between: ' + secondsBetween);
 
-  var totalTime = '';
+  var totalTime = Math.abs(secondsBetween);
   var timeLeft = countdown(sunsetTimestamp, null, countdown.SECONDS);
+
+  console.log('Time left: ' + timeLeft);
 
   var percentage = 1 - (timeLeft/totalTime);
 
+  console.log('Percentage: ' + percentage);
+
+/*
   var count = moment("1754", "hhmm").fromNow();
   document.write(count + '<br><br>');
+*/
