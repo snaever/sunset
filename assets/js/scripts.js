@@ -1,6 +1,6 @@
 // Creating variables for today's sunrise and sunset
-  var sunrise = '2017-10-26 08:12:29';
-  var sunset = '2017-10-26 17:52:06';
+  var sunrise = '2017-10-27 08:12:29';
+  var sunset = '2017-10-27 17:52:06';
 
 // Generating timestamps for the times
   var sunriseTimestamp = (moment(sunrise).unix())*1000;
@@ -24,6 +24,8 @@
 // Calculating the percentage of spent daylight
   var percentage = 1-(timeLeft/totalTime);
   var percentage = percentage*100;
+
+  setInterval(percentage, 1000);
 
   console.log('Percentage: ' + percentage);
 
