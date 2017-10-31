@@ -9,6 +9,30 @@ main {
 	position: relative;
 }
 
+.menu {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 10px);
+}
+
+.menu button {
+	cursor: pointer;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #72bfdc;
+    border-color: #72bfdc;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #4f93ad;
+    border-color: #4f93ad;
+}
+
 section#night {
 	background-color: #3d3d40;
 	background-image: url('../image/nat.png');
