@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html ng-app="sunsetApp">
+
 <head>
-	<title>Solnedgang</title>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script type="text/javascript" src="assets/js/moment.js"></script>
-  	<script type="text/javascript" src="assets/js/countdown.min.js"></script>
-  	<script type="text/javascript" src="assets/js/scripts.js"></script>
-  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Solnedgang</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/moment.js"></script>
+    <script type="text/javascript" src="assets/js/countdown.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <script type="text/javascript">
-	
-	document.write('<style>section#night { width: '+ percentage +'%; }</style>');
-
+    document.write('<style>section#night { width: ' + percentage + '%; }</style>');
 </script>
 
 <body>
-
-	<main ng-controller="timeController">
+       
+    
+    <main ng-controller="timeController">
       
-  	<section id="night">
-      <img src="assets/image/sm.svg"> 
-    </section>
+      <!-- Solopgang knab !-->
+      <div class="hideShow" ng-show="sunrise">
+    <h1 class="text-center">Solopgang<br>{{dataset.results.sunrise | date: "HH:mm"}}</h1>
+</div>
+<button ng-click="sunrise= !sunrise" ng-show="!sunrise" type="button" class="btn btn-outline-info">Solopgang</button>
+<button ng-click="sunrise= !sunrise" ng-show="sunrise" type="button" class="btn btn-outline-info">Skjul</button>
+   <!-- Solopgang knab !-->
+   
+   <!-- Solnedgang knab !-->
+   <div class="hideShow" ng-show="sunset">
+    <h1 class="text-center">Solnedgang<br>{{dataset.results.sunset | date: "HH:mm"}}</h1>
+</div>
+<button ng-click="sunset= !sunset" ng-show="!sunset" type="button" class="btn btn-outline-info">Solnedgang</button>
+<button ng-click="sunset= !sunset" ng-show="sunset" type="button" class="btn btn-outline-info">Skjul</button>
+  <!-- Solnedgang knab !--> 
+   
+   <!-- Middag knab !-->
+   <div class="hideShow" ng-show="solar_noon">
+    <h1 class="text-center">Middag<br>{{dataset.results.solar_noon | date: "HH:mm"}}</h1>
+</div>
+<button ng-click="solar_noon= !solar_noon" ng-show="!solar_noon" type="button" class="btn btn-outline-info">Middag</button>
+<button ng-click="solar_noon= !solar_noon" ng-show="solar_noon" type="button" class="btn btn-outline-info">Skjul</button>
+<!-- Middag knab !-->     
+     
+      
+       
+        
+        
+        
+        
 
-<!--
+        <section id="night">
+            <img src="assets/image/sm.svg">
+        </section>
+
+        <!--
       {{ dataset.results.sunset | date: 'HH:mm:ss' }}<br>
       {{ dataset.results.sunrise | date: 'HH:mm:ss' }}<br><br>
 
       {{ dataset.results.sunset | date: 'yyyy-MM-dd HH:mm:ss' }}<br>
       {{ dataset.results.sunrise | date: 'yyyy-MM-dd HH:mm:ss' }}<br><br>
+      
+      <h1 class="text-center">{{dataset.results.sunrise | date: "HH:mm"}}</h1>
 -->
 
-	</main>
+    </main>
 
 </body>
+
 </html>
