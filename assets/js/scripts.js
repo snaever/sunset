@@ -19,16 +19,15 @@
   var totalTime = Math.abs(secondsBetween);
   var timeLeft = countdown(sunsetTimestamp, null, countdown.SECONDS).toString().split(' ')[0];
 
-// Automatically subtracting 1 from the timeLeft variable
+  function percentage(){
 
-  function Percentage1(){
-
+    // Subtracting 1 from the timeLeft variable
       timeLeft = timeLeft - 1;
       console.log('Time left: ' + timeLeft);
 
-      // Calculating the percentage of spent daylight
-        var percentage = 1-(timeLeft/totalTime);
-        var percentage = percentage*100;
+    // Calculating the percentage of spent daylight
+      var percentage = 1-(timeLeft/totalTime);
+      var percentage = percentage*100;
 
       console.log('Percentage: ' + percentage);
 
