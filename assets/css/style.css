@@ -3,6 +3,16 @@ body {
 }
 
 section#night {
-	background-color: #000;
+	background-color: #3d3d40;
+	background-image: url('../image/nat.svg');
 	height: 100vh;
+	position: relative;
+}
+
+section#night img {
+	position: absolute;
+	max-width: 250px;
+	right: -155px;
+	top: 50%;
+	transform: translate(0%, -50%);
 }
