@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="sunsetApp">
 
 <head>
@@ -12,11 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-<script type="text/javascript">
-    document.write('<style>section#night { width: ' + percentage + '%; }</style>');
-</script>
-
-<body>
+  <body>
        
     
     <main ng-controller="timeController">
@@ -45,12 +41,6 @@
 <button ng-click="solar_noon= !solar_noon" ng-show="solar_noon" type="button" class="btn btn-outline-info">Skjul</button>
 <!-- Middag knab !-->     
      
-      
-       
-        
-        
-        
-        
 
         <section id="night">
             <img src="assets/image/sm.svg">
@@ -67,6 +57,18 @@
 -->
 
     </main>
+
+<script type="text/javascript">
+
+    setInterval(
+      
+      function(){
+        percentage()
+      },
+
+      1000);
+
+</script>
 
 </body>
 

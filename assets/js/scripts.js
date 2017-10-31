@@ -19,15 +19,21 @@
   var totalTime = Math.abs(secondsBetween);
   var timeLeft = countdown(sunsetTimestamp, null, countdown.SECONDS).toString().split(' ')[0];
 
-  console.log('Time left: ' + timeLeft);
+  function percentage(){
 
-// Calculating the percentage of spent daylight
-  var percentage = 1-(timeLeft/totalTime);
-  var percentage = percentage*100;
+    // Subtracting 1 from the timeLeft variable
+      timeLeft = timeLeft - 1;
+      console.log('Time left: ' + timeLeft);
 
-  setInterval(percentage, 1000);
+    // Calculating the percentage of spent daylight
+      var percentage = 1-(timeLeft/totalTime);
+      var percentage = percentage*100;
 
-  console.log('Percentage: ' + percentage);
+      console.log('Percentage: ' + percentage);
+
+      document.getElementById("night").style.width = percentage+'%';
+
+  };
 
 /*
   var count = moment("1754", "hhmm").fromNow();
