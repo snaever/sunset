@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html ng-app="sunsetApp">
 <head>
 	<title>Solnedgang</title>
@@ -10,17 +10,16 @@
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-<script type="text/javascript">
-	
-	document.write('<style>section#night { width: '+ percentage +'%; }</style>');
 
-</script>
+
+
 
 <body>
 
 	<main ng-controller="timeController">
       
   	<section id="night">
+
       <img src="assets/image/sm.svg"> 
     </section>
 
@@ -33,6 +32,12 @@
 -->
 
 	</main>
+
+<script type="text/javascript">
+
+    var myVar = setInterval(function(){ Percentage1() }, 1000);
+
+</script>
 
 </body>
 </html>
