@@ -1,10 +1,11 @@
 // Creating variables for today's sunrise and sunset
-  var sunrise = '2017-10-31 07:22:49';
-  var sunset = '2017-10-31 16:41:09';
+  var sunrise = '2017-11-01 07:24:49';
+  var sunset = '2017-11-01 16:39:09';
 
 // Generating timestamps for the times
   var sunriseTimestamp = (moment(sunrise).unix())*1000;
   var sunsetTimestamp = (moment(sunset).unix())*1000;
+  var curTimestamp = Date.now();
 
 // Calculating the difference in seconds between today's sunrise and sunset
   var t1 = new Date(sunset);
@@ -19,15 +20,24 @@
   var totalTime = Math.abs(secondsBetween);
   var timeLeft = countdown(sunsetTimestamp, null, countdown.SECONDS).toString().split(' ')[0];
 
-  function percentage(){
+  function percentage() {
 
     // Subtracting 1 from the timeLeft variable
       timeLeft = timeLeft - 1;
       console.log('Time left: ' + timeLeft);
 
     // Calculating the percentage of spent daylight
+
+    if (curTimestamp > sunsetTimestamp) {
+      
+      var percentage = 100;
+
+    } else {
+
       var percentage = 1-(timeLeft/totalTime);
       var percentage = percentage*100;
+
+    };
 
       console.log('Percentage: ' + percentage);
 
