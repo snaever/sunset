@@ -31,7 +31,7 @@ I toppen af vores side er der tre knapper der hedder Solopgang, Solnedgang og Mi
 Informationerne bliver printet på siden fra den eksterne API/JSON-fil, ved at bruge et AngularJS direktiv: {{dataset.results.sunrise}}. I dette eksempel bliver der printet tidspunktet for dagens solopgang.
 {{dataset.results.sunrise | date: ”HH:mm”}} her er der tilføjet er angular.js filter der skriver informationen som en dato. ”HH:mm” specificerer at det er timer og minutter vi vil have printet.
 Selve knapperne bliver vist og skjult når man klikker på dem ved hjælp af AngularJS directives ng-click og ng-show. HTML elementet der indeholder informationerne om solopgang osv. er skjult som standard og bliver vist når man trykker på knappen ved hjælp af ng-click og ng-show. Når man har trykket på knappen bliver informationerne i "<h1>" vist og en ny knap der hedder ”Skjul” bliver også vist.
-Skjul knappen har også en ng-click og ng-show fx med værdien !sunset. Udråbstegnet gør at ng-show i realiteten gør det modsatte og skjuler <h1> elementet.
+Skjul knappen har også en ng-click og ng-show fx med værdien !sunset. Udråbstegnet gør at ng-show i realiteten gør det modsatte og skjuler "<h1>" elementet.
 
 # PROCESSEN
 
