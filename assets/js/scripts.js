@@ -1,6 +1,6 @@
 // Creating variables for today's sunrise and sunset
-  var sunrise = '2017-11-01 07:26:49';
-  var sunset = '2017-11-01 16:36:09';
+  var sunrise = '2017-11-01 07:29:49';
+  var sunset = '2017-11-01 16:34:09';
 
 // Generating timestamps for the times
   var sunriseTimestamp = (moment(sunrise).unix())*1000;
