@@ -1,6 +1,13 @@
+// Making the date auto update
+  var d = new Date();
+  var dd = d.getDate();
+  var mm = d.getMonth();
+  var mm = mm+1;
+  var yy = d.getFullYear();
+
 // Creating variables for today's sunrise and sunset
-  var sunrise = '2017-11-07 07:37:49';
-  var sunset = '2017-11-07 16:26:09';
+  var sunrise = yy + '-' + mm + '-' + dd + ' 07:37:49';
+  var sunset = yy + '-' + mm + '-' + dd + ' 16:26:09';
 
 // Generating timestamps for the times
   var sunriseTimestamp = (moment(sunrise).unix())*1000;
